@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Basic commands
+echo "Hello, World!" # Print a message to the terminal
+date # Display the current date and time
+pwd # Print the current working directory
+ls -l # List files in the current directory in long format
+
+# File and directory management commands
+mkdir test_directory # Create a new directory
+cd test_directory # Change to the new directory
+touch test_file.txt # Create a new empty file
+echo "Sample text" > test_file.txt # Write text to the file
+cat test_file.txt # Display the content of the file
+cp test_file.txt copy_of_test_file.txt # Copy the file
+mv copy_of_test_file.txt moved_test_file.txt # Move/rename the file
+rm test_file.txt # Remove the file
+cd .. # Go back to the previous directory
+rmdir test_directory # Remove the directory
+
+# System commands
+whoami # Display the current user
+uname -a # Display system information
+top -n 1 # Display the top processes (one-time output)
+
+# Networking commands
+ping -c 4 google.com # Ping Google to check network connectivity
+
+
+# Commands requiring elevated privileges
+sudo echo "This requires root permissions" # Print a message with root permissions
+
+# Conditional statements and loops
+if [ -f /etc/passwd ]; then
+  echo "/etc/passwd exists" # Check if a file exists and print a message
+else
+  echo "/etc/passwd does not exist"
+fi
+
+if [ $(whoami) == 'root' ]; then
+  echo "You are root"
+else
+  echo "You are not root"
+fi
+
+
